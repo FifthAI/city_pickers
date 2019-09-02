@@ -56,12 +56,12 @@ class CityPickers {
           barrierOpacity: barrierOpacity,
           barrierLabel:
               MaterialLocalizations.of(context).modalBarrierDismissLabel,
-          child: BaseView(
+          child: MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),child:BaseView(
               showType: showType,
               height: height,
               citiesData: citiesData ?? meta.citiesData,
               provincesData: provincesData ?? meta.provincesData,
-              locationCode: locationCode)),
+              locationCode: locationCode))),
     );
   }
 
